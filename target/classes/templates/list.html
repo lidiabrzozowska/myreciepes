@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje przepisy</title>
+</head>
+<body>
+<a href="/dish/add/">Dodaj przepis</a>
+
+<table>
+    <tr>
+        <th>Nazwa dania</th>
+        <th>Skład</th>
+        <th>Gramatura/ g</th>
+        <th>Kaloryczność/ kcal</th>
+        <th>Przepis</th>
+        <th>Edytuj</th>
+        <th>Usuń</th>
+
+
+
+    </tr>
+    <tr th:each="dish: ${dishs}">
+        <td th:text="${dish.nameDish}"></td>
+        <td th:text="${dish.storeDish}"></td>
+        <td th:text="${dish.basisWeightDish}"></td>
+        <td th:text="${dish.caloriesDish}"></td>
+        <td th:text="${dish.descriptionDish}"></td>
+        <td> <a th:href="@{/dish/edit/{id}/(id=${dish.id})}">Edytuj</a> </td>
+        <td> <a th:href="@{/dish/delete/{id}/(id=${dish.id})}">Usuń</a> </td>
+
+    </tr>
+</table>
+
+</body>
+</html>

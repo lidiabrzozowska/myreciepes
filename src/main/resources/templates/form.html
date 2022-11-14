@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje przepisy</title>
+</head>
+<body>
+<form th:method="post" th:action="@{/dish/save/}" th:object="${dish}" >
+    <input type="hidden" th:field="*{id}">
+    <input th:field="*{nameDish}" placeholder="nazwa dania">
+    <input th:field="*{storeDish}" placeholder="sklad">
+    <input th:field="*{basisWeightDish}" placeholder="gramatura/ g">
+    <input th:field="*{caloriesDish}" placeholder="kalorycznosc/ kcal">
+    <input th:field="*{descriptionDish}" placeholder="przepis">
+    <input type="submit" value="Zapisz">
+</form>
+</body>
+</html>

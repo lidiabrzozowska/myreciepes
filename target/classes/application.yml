@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/my_reciepes'
+    username: 'root'
+    password: 'Kurs#grupa1'
+  jpa:
+    hibernate:
+      ddl-auto: update
